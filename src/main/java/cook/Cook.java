@@ -21,12 +21,11 @@ import utils.FilesUtils;
 public class Cook {
 
     private static final List<String> EXTENSIONS = List.of("png", "jpg", "jpeg", "pdf");
-    // public static final String DIRECTORY = System.getProperty("user.dir");
+    public static final String DIRECTORY = System.getProperty("user.dir");
     public static final Function<Path, String> GET_FILE_NAME = file -> StringUtils
             .substringBeforeLast(file.getFileName().toString(), ".");
     public static final Comparator<Path> FILE_NAME_COMPARATOR = (c1, c2) -> String.CASE_INSENSITIVE_ORDER
             .compare(GET_FILE_NAME.apply(c1), GET_FILE_NAME.apply(c2));
-    public static final String DIRECTORY = "C:\\Users\\workspace\\Dropbox\\Cuisine";
     public static final String RESULT_FILE = "Cook.md";
     public static final String PREFIX_FILE = "file://";
 
@@ -43,16 +42,15 @@ public class Cook {
             List<Path> children = new ArrayList<>();
             FilesUtils.listFilesForFolder(file, children, EXTENSIONS, RESULT_FILE);
             children.stream().sorted(FILE_NAME_COMPARATOR)
-            .forEach(child -> sb.append(
-                    new Link(GET_FILE_NAME.apply(child), PREFIX_FILE + child.toAbsolutePath().toString()))
+            .forEach(child -> sb
+                    .append(new Link(GET_FILE_NAME.apply(child),
+                            "." + File.separator + file.getFileName() + File.separator + child.getFileName()))
                     .append("\n"));
         });
         sb.append(new Heading("Divers", 1)).append("\n");
-        files.stream().filter(Predicate.not(Files::isDirectory)).sorted(FILE_NAME_COMPARATOR).forEach(f -> sb
-                .append(new Link(GET_FILE_NAME.apply(f), PREFIX_FILE + f.toAbsolutePath().toString())).append("\n"));
+        files.stream().filter(Predicate.not(Files::isDirectory)).sorted(FILE_NAME_COMPARATOR).forEach(
+                f -> sb.append(new Link(GET_FILE_NAME.apply(f), "." + File.separator + f.getFileName())).append("\n"));
         Files.write(Paths.get(DIRECTORY.concat(File.separator).concat(RESULT_FILE)),
                 sb.toString().getBytes(Charset.forName("UTF-8")), StandardOpenOption.CREATE);
     }
-    // [link](url){:target="_blank"}
-    // <a href="http://example.com/" target="_blank">example</a>
 }
