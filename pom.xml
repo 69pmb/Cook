@@ -32,7 +32,7 @@
 						<configuration>
 							<archive>
 								<manifest>
-									<mainClass>com.pmb.md.Cook</mainClass>
+									<mainClass>cook.Cook</mainClass>
 								</manifest>
 							</archive>
 							<descriptorRefs>
