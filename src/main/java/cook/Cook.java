@@ -50,7 +50,8 @@ public class Cook {
         sb.append(new Heading("Divers", 1)).append("\n");
         files.stream().filter(Predicate.not(Files::isDirectory)).sorted(FILE_NAME_COMPARATOR).forEach(
                 f -> sb.append(new Link(GET_FILE_NAME.apply(f), "." + File.separator + f.getFileName())).append("\n"));
-        Files.write(Paths.get(DIRECTORY.concat(File.separator).concat(RESULT_FILE)),
-                sb.toString().getBytes(Charset.forName("UTF-8")), StandardOpenOption.CREATE);
+        Path resultFile = Paths.get(DIRECTORY.concat(File.separator).concat(RESULT_FILE));
+        Files.deleteIfExists(resultFile);
+        Files.write(resultFile, sb.toString().getBytes(Charset.forName("UTF-8")), StandardOpenOption.CREATE);
     }
 }
