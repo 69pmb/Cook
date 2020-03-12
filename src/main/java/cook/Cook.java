@@ -6,7 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
@@ -31,17 +30,14 @@ public class Cook {
 
     public static void main(String[] args) throws Exception {
         Path dir = Paths.get(DIRECTORY);
-        List<Path> files = new ArrayList<>();
-        FilesUtils.listFilesForFolder(dir, files, EXTENSIONS, RESULT_FILE);
+        List<Path> files = FilesUtils.listFilesForFolder(dir, EXTENSIONS, RESULT_FILE);
         if (files.isEmpty()) {
             throw new Exception("Dossier: " + dir + " vide");
         }
         StringBuilder sb = new StringBuilder();
         files.stream().filter(Files::isDirectory).forEach(file -> {
             sb.append(new Heading(file.getFileName().toString(), 1)).append("\n");
-            List<Path> children = new ArrayList<>();
-            FilesUtils.listFilesForFolder(file, children, EXTENSIONS, RESULT_FILE);
-            children.stream().sorted(FILE_NAME_COMPARATOR)
+            FilesUtils.listFilesForFolder(file, EXTENSIONS, RESULT_FILE).stream().sorted(FILE_NAME_COMPARATOR)
             .forEach(child -> sb
                     .append(new Link(GET_FILE_NAME.apply(child),
                             "." + File.separator + file.getFileName() + File.separator + child.getFileName()))
