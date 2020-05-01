@@ -1,8 +1,18 @@
 ---
 title: Recette
 ---
-1. Entree  
+1. Entree
 =========  
+[Cake Aux Amandes](.\docs\1. Entree\Cake aux Amandes.jpg) (138 KB jpg)  
+[Celeri](.\docs\1. Entree\Celeri.jpg) (122 KB jpg)  
+[Concombre](.\docs\1. Entree\Concombre.jpg) (133 KB jpg)  
+[Quiche Au Jambon](.\docs\1. Entree\Quiche au jambon.jpg) (37 KB jpg)  
+[Quiche Aux Oignons](.\docs\1. Entree\Quiche aux oignons.jpg) (43 KB jpg)  
+[Quiche Aux Poireaux](.\docs\1. Entree\Quiche aux poireaux.jpg) (45 KB jpg)  
+[Quiche Lorraine](.\docs\1. Entree\Quiche Lorraine.jpg) (41 KB jpg)  
+[Salade Au Paprika](.\docs\1. Entree\Salade au paprika.jpg) (58 KB jpg)  
+[Salade Niçoise](.\docs\1. Entree\Salade Niçoise.jpg) (56 KB jpg)  
+[Taboulé](.\docs\1. Entree\Taboulé.jpg) (150 KB jpg)  
 [Celeri](.\docs\1. Entree\Celeri.pdf)  
 [Concombre](.\docs\1. Entree\Concombre.pdf)  
 [Entrée](.\docs\1. Entree\Entrée.pdf)  
