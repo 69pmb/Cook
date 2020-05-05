@@ -25,6 +25,10 @@ public class FilesUtils {
     private static final List<String> EXTENSIONS = List.of("png", "jpg", "jpeg", "pdf");
     private static final String ROOT_DIRECTORY = System.getProperty("user.dir");
     private static final String DOCS = ROOT_DIRECTORY + File.separator + "docs";
+    private static final String ASSETS_DIR = "." + File.separator + "assets" + File.separator;
+    private static final String ARROW_LEFT = "left.svg";
+    private static final String ARROW_UP = "up.svg";
+    private static final String ARROW_RIGHT = "right.svg";
     private static final String RESULT_FILE = "index.md";
 
     /**
@@ -81,5 +85,10 @@ public class FilesUtils {
         Path resultFile = Paths.get(ROOT_DIRECTORY.concat(File.separator).concat(RESULT_FILE));
         Files.deleteIfExists(resultFile);
         Files.write(resultFile, sb.toString().getBytes(Charset.forName("UTF-8")), StandardOpenOption.CREATE);
+    }
+
+    public static List<String> getArrows() {
+        return List.of(ARROW_LEFT, ARROW_UP, ARROW_RIGHT).stream().map(arrow -> ASSETS_DIR + arrow)
+                .collect(Collectors.toList());
     }
 }
