@@ -31,4 +31,16 @@ public class MarkdownUtils {
         return "." + File.separator + "docs" + File.separator
                 + Optional.ofNullable(folder).map(dir -> folder + File.separator).orElse("") + Path.of(file);
     }
+
+    public static String buildArrowsHeader(String left, String right) {
+        String[] array = FilesUtils.getArrows().toArray(new String[0]);
+        return "<p align=\"justify\">" + MarkdownUtils.buildImgLink(array[0], "Page précedente", left)
+        + MarkdownUtils.buildImgLink(array[1], "Page parente", "..")
+        + MarkdownUtils.buildImgLink(array[2], "Page suivante", right) + "</p>" + NEW_LINE;
+    }
+
+    public static String buildImgLink(String img, String tooltip, String url) {
+        return "<a href=\"" + url + "\"><img src=\"" + img + "\" title=\"" + tooltip
+                + "\" style=\"height: 5vh\" /></a>";
+    }
 }
