@@ -3,6 +3,7 @@ package cook.domain;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Predicate;
 
 public class Parent extends AbstractCook {
     private List<Child> children;
@@ -17,6 +18,11 @@ public class Parent extends AbstractCook {
 
     public void setChildren(List<Child> children) {
         this.children = children;
+    }
+
+    public long countGrandChildren() {
+        return children.stream().filter(Predicate.not(Child::isDirectory)).count()
+                + children.parallelStream().map(Child::getGrandChildren).flatMap(List::stream).count();
     }
 
     @Override

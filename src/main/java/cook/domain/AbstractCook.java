@@ -17,6 +17,10 @@ public abstract class AbstractCook {
         this.file = file;
     }
 
+    public boolean isDirectory() {
+        return file.getIsDirectory();
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(file);
