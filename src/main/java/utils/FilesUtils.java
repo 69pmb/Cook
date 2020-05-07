@@ -29,7 +29,8 @@ public class FilesUtils {
     private static final String ARROW_LEFT = "left.svg";
     private static final String ARROW_UP = "up.svg";
     private static final String ARROW_RIGHT = "right.svg";
-    private static final String RESULT_FILE = "index.md";
+    public static final String MD_EXT = ".md";
+    public static final String INDEX_FILE = "index" + MD_EXT;
 
     /**
      * Récupère la liste des fichiers d'un dossier.
@@ -41,8 +42,7 @@ public class FilesUtils {
         try {
             return Files.list(pathFolder)
                     .filter(fileEntry -> Files.isDirectory(fileEntry) || EXTENSIONS.stream()
-                            .anyMatch(extension -> StringUtils.endsWith(fileEntry.getFileName().toString(), extension))
-                            && !StringUtils.equalsIgnoreCase(fileEntry.getFileName().toString(), RESULT_FILE))
+                            .anyMatch(extension -> StringUtils.endsWith(fileEntry.getFileName().toString(), extension)))
                     .map(FilesUtils::pathToCookFile).collect(Collectors.toList());
         } catch (IOException e) {
             throw new RuntimeException("Error listing files in: " + pathFolder.toFile().getAbsolutePath(), e);
@@ -81,8 +81,8 @@ public class FilesUtils {
         return cookFile;
     }
 
-    public static void writeFileResult(StringBuilder sb) throws IOException {
-        Path resultFile = Paths.get(ROOT_DIRECTORY.concat(File.separator).concat(RESULT_FILE));
+    public static void writeFileResult(StringBuilder sb, String file) throws IOException {
+        Path resultFile = Paths.get(ROOT_DIRECTORY.concat(File.separator).concat(file));
         Files.deleteIfExists(resultFile);
         Files.write(resultFile, sb.toString().getBytes(Charset.forName("UTF-8")), StandardOpenOption.CREATE);
     }
