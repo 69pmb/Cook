@@ -1,4 +1,4 @@
-package utils;
+package cook.utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,6 +30,7 @@ public class FilesUtils {
     private static final String ARROW_UP = "up.svg";
     private static final String ARROW_RIGHT = "right.svg";
     public static final String MD_EXT = ".md";
+    public static final String HTML_EXT = ".html";
     public static final String INDEX_FILE = "index" + MD_EXT;
 
     /**
