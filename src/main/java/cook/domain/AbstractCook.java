@@ -21,6 +21,10 @@ public abstract class AbstractCook {
         return file.getIsDirectory();
     }
 
+    public String getName() {
+        return file.getName();
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(file);
