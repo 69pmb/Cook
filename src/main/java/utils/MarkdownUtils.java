@@ -29,13 +29,13 @@ public class MarkdownUtils {
         sb.append(String.format(FILE_HEADER, Optional.ofNullable(title).orElse("Recette"))).append(NEW_LINE);
     }
 
-    private void buildHeadind(String heading, long count, int size) {
-        sb.append(new Heading(heading + " (" + count + ")", size)).append(NEW_LINE);
+    public void buildHeadind(String heading, long count, int level) {
+        sb.append(new Heading(heading + " (" + count + ")", level)).append(NEW_LINE);
     }
 
     public void buildLinkPage(Parent parent) {
         buildHeadind(new Link(parent.getFile().getName(), parent.getFile().getName() + ".md").toString(),
-                parent.countGrandChildren(), 1);
+                parent.countChildrenAndGrandChildren(), 1);
     }
 
     public void buildLinkPage(Parent parent, Child child) {
@@ -52,9 +52,16 @@ public class MarkdownUtils {
 
     public void buildArrowsHeader(String left, String right) {
         String[] array = FilesUtils.getArrows().toArray(new String[0]);
-        sb.append("<p align=\"justify\">").append(MarkdownUtils.buildImgLink(array[0], "Page précedente", left))
-        .append(MarkdownUtils.buildImgLink(array[1], "Page parente", ".."))
-        .append(MarkdownUtils.buildImgLink(array[2], "Page suivante", right)).append("</p>").append(NEW_LINE);
+        String leftArrow = Optional.ofNullable(left)
+                .map(path -> MarkdownUtils.buildImgLink(array[0], "Page précedente", path + FilesUtils.MD_EXT))
+                .orElse("");
+        String rightArrow = Optional.ofNullable(right)
+                .map(path -> MarkdownUtils.buildImgLink(array[2], "Page suivante", path + FilesUtils.MD_EXT))
+                .orElse("");
+
+        sb.append("<p align=\"justify\">").append(leftArrow)
+        .append(MarkdownUtils.buildImgLink(array[1], "Page parente", "..")).append(rightArrow).append("</p>")
+        .append(NEW_LINE);
     }
 
     public static String buildImgLink(String img, String tooltip, String url) {
