@@ -20,7 +20,7 @@ public class Parent extends AbstractCook {
         this.children = children;
     }
 
-    public long countGrandChildren() {
+    public long countChildrenAndGrandChildren() {
         return children.stream().filter(Predicate.not(Child::isDirectory)).count()
                 + children.parallelStream().map(Child::getGrandChildren).flatMap(List::stream).count();
     }
