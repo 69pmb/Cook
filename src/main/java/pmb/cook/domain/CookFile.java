@@ -1,8 +1,12 @@
-package cook.domain;
+package pmb.cook.domain;
 
 import java.util.Objects;
 
+import pmb.cook.aspect.NoLogging;
+
+@NoLogging
 public class CookFile {
+
     private String name;
     private String fullName;
     private String extension;
@@ -73,7 +77,13 @@ public class CookFile {
         }
         CookFile other = (CookFile) obj;
         return Objects.equals(absolutePath, other.absolutePath) && Objects.equals(extension, other.extension)
-                && Objects.equals(fullName, other.fullName) && Objects.equals(isDirectory, other.isDirectory)
-                && Objects.equals(name, other.name) && Objects.equals(size, other.size);
+                && Objects.equals(fullName, other.fullName) && Objects.equals(isDirectory, other.isDirectory) && Objects.equals(name, other.name)
+                && Objects.equals(size, other.size);
     }
+
+    @Override
+    public String toString() {
+        return "CookFile [fullName=" + fullName + "]";
+    }
+
 }
