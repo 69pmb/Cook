@@ -1,9 +1,13 @@
-package cook.domain;
+package pmb.cook.domain;
 
 import java.util.Objects;
 
+import pmb.cook.aspect.NoLogging;
+
+@NoLogging
 public abstract class AbstractCook {
-    CookFile file;
+
+    private CookFile file;
 
     public AbstractCook(CookFile file) {
         this.file = file;
@@ -41,4 +45,10 @@ public abstract class AbstractCook {
         AbstractCook other = (AbstractCook) obj;
         return Objects.equals(file, other.file);
     }
+
+    @Override
+    public String toString() {
+        return "AbstractCook [file=" + file + "]";
+    }
+
 }

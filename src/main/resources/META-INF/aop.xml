@@ -1,0 +1,8 @@
+<aspectj>
+    <aspects>
+        <aspect name="pmb.cook.aspect.LoggingAspect" />
+    </aspects>
+    <weaver>
+        <include within="pmb.cook..*" />
+    </weaver>
+</aspectj>

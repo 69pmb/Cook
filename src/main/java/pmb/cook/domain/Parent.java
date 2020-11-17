@@ -1,11 +1,16 @@
-package cook.domain;
+package pmb.cook.domain;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Predicate;
 
-public class Parent extends AbstractCook {
+import pmb.cook.aspect.NoLogging;
+
+@NoLogging
+public class Parent
+        extends AbstractCook {
+
     private List<Child> children;
 
     public Parent(CookFile file) {
@@ -29,7 +34,7 @@ public class Parent extends AbstractCook {
     public int hashCode() {
         final int prime = 31;
         int result = super.hashCode();
-        result = prime * result + Objects.hash(children);
+        result = (prime * result) + Objects.hash(children);
         return result;
     }
 
@@ -47,4 +52,5 @@ public class Parent extends AbstractCook {
         Parent other = (Parent) obj;
         return Objects.equals(children, other.children);
     }
+
 }

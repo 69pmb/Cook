@@ -1,2 +1,2 @@
-call mvn exec:java
+call mvn compile exec:java -Dexec.cleanupDaemonThreads=false
 pause
