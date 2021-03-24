@@ -14,6 +14,20 @@ header, footer, section {
   margin-left: 20vw !important;
 }
 
+#logo {
+	width: 50px;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	margin: 0 0 10px;
+}
+
+.title > * {
+	margin: 0 5px;
+}
+
 @media only screen and (min-width: 720px) {
   .wrapper {
     width: 80vw !important;

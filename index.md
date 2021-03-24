@@ -1,5 +1,5 @@
 ---
-title: Recette
+title: Recettes
 ---  
 # Recettes:  
 ## [1. Entree](1. Entree.md) (8)  
