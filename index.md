@@ -1,13 +1,15 @@
 ---
-title: Recettes
+title: Recette
 ---  
 # Recettes:  
-## [1. Entree](1. Entree.md) (8)  
+## [1. Entree](1. Entree.md) (23)  
 ### - [Brochettes Végétariennes](1. Entree.md#brochettes-végétariennes-4) (4)  
-### - [Divers](1. Entree.md#divers-4) (4)  
+### - [Salade](1. Entree.md#salade-3) (3)  
+### - [Taboulé](1. Entree.md#taboulé-3) (3)  
+### - [Divers](1. Entree.md#divers-13) (13)  
 ## [2. Viande](2. Viande.md) (6)  
 ## [3. Poisson](3. Poisson.md) (7)  
-## [4. Végétarien](4. Végétarien.md) (84)  
+## [4. Végétarien](4. Végétarien.md) (86)  
 ### - [Crêpes](4. Végétarien.md#crêpes-6) (6)  
 ### - [Farcis](4. Végétarien.md#farcis-12) (12)  
 ### - [Lasagnes](4. Végétarien.md#lasagnes-6) (6)  
@@ -15,8 +17,8 @@ title: Recettes
 ### - [Quiches](4. Végétarien.md#quiches-6) (6)  
 ### - [Salade](4. Végétarien.md#salade-2) (2)  
 ### - [Sandwichs](4. Végétarien.md#sandwichs-5) (5)  
-### - [Soufflés](4. Végétarien.md#soufflés-9) (9)  
-### - [Tartes](4. Végétarien.md#tartes-11) (11)  
+### - [Soufflés](4. Végétarien.md#soufflés-10) (10)  
+### - [Tartes](4. Végétarien.md#tartes-12) (12)  
 ### - [Divers](4. Végétarien.md#divers-16) (16)  
 ## [5. Dessert](5. Dessert.md) (53)  
 ### - [Cheese Cake](5. Dessert.md#cheese-cake-3) (3)  
@@ -26,7 +28,7 @@ title: Recettes
 ### - [Divers](5. Dessert.md#divers-27) (27)  
 ## Divers (5)  
 [Citronnade](.\docs\Citronnade.pdf) (424 KB pdf)  
-[Cuisine Végétarienne](.\docs\Cuisine végétarienne.jpg) (467 KB jpg)  
+[Cuisine Végétarienne](.\docs\Cuisine végétarienne.jpg) (453 KB jpg)  
 [Liste De Desserts](.\docs\Liste de desserts.pdf) (123 KB pdf)  
 [Liste De Plats Principaux](.\docs\Liste de plats principaux.pdf) (204 KB pdf)  
 [Végétarien Pictogrammes](.\docs\Végétarien Pictogrammes.jpg) (214 KB jpg)  
