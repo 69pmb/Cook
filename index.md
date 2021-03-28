@@ -1,5 +1,5 @@
 ---
-title: Recette
+title: Recettes
 ---  
 # Recettes:  
 ## [1. Entree](1. Entree.md) (23)  
@@ -7,7 +7,11 @@ title: Recette
 ### - [Salade](1. Entree.md#salade-3) (3)  
 ### - [Taboulé](1. Entree.md#taboulé-3) (3)  
 ### - [Divers](1. Entree.md#divers-13) (13)  
-## [2. Viande](2. Viande.md) (6)  
+## [2. Viande](2. Viande.md) (29)  
+### - [Lapin](2. Viande.md#lapin-4) (4)  
+### - [Veau](2. Viande.md#veau-7) (7)  
+### - [Volaille](2. Viande.md#volaille-10) (10)  
+### - [Divers](2. Viande.md#divers-8) (8)  
 ## [3. Poisson](3. Poisson.md) (7)  
 ## [4. Végétarien](4. Végétarien.md) (86)  
 ### - [Crêpes](4. Végétarien.md#crêpes-6) (6)  

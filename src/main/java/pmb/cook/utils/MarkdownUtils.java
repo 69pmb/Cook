@@ -28,7 +28,7 @@ public class MarkdownUtils {
     }
 
     public void buildFileHeader(String title) {
-        sb.append(String.format(FILE_HEADER, Optional.ofNullable(title).orElse("Recette"))).append(NEW_LINE);
+        sb.append(String.format(FILE_HEADER, Optional.ofNullable(title).orElse("Recettes"))).append(NEW_LINE);
     }
 
     public void buildHeadind(String heading, Long count, int level) {
