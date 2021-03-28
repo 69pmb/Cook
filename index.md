@@ -12,7 +12,7 @@ title: Recettes
 ### - [Veau](2. Viande.md#veau-7) (7)  
 ### - [Volaille](2. Viande.md#volaille-10) (10)  
 ### - [Divers](2. Viande.md#divers-8) (8)  
-## [3. Poisson](3. Poisson.md) (7)  
+## [3. Poisson](3. Poisson.md) (27)  
 ## [4. Végétarien](4. Végétarien.md) (86)  
 ### - [Crêpes](4. Végétarien.md#crêpes-6) (6)  
 ### - [Farcis](4. Végétarien.md#farcis-12) (12)  
