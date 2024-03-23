@@ -9,7 +9,7 @@
     <name>Cook</name>
 
     <properties>
-        <aspectj.version>1.9.19</aspectj.version>
+        <aspectj.version>1.9.22</aspectj.version>
         <log4j.version>2.19.0</log4j.version>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
